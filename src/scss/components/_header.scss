@@ -1,0 +1,12 @@
+header{
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        &__list{
+            display: flex;
+        }
+        &__btn{
+            display: inline-block;
+        }
+    }
+}

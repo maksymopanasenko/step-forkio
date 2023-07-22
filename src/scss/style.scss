@@ -1,8 +1,8 @@
 @import 'base/reset';
 
 .container {
-    max-width: 1190px;
+    max-width: 1200px;
     margin: 0 auto;
 }
-
+@import 'components/header';
 @import 'components/intro';
