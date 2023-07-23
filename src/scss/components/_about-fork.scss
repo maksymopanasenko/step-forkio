@@ -3,10 +3,7 @@
 
 .about-fork {
     padding-top: 109px;
-    background-image: url('../img/about-fork_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url('../img/about-fork_bg.png') center/cover no-repeat;
     text-align: center;
 
     &__title {
@@ -39,27 +36,29 @@
             max-width: 325px;
         }
 
-        margin-bottom: 118px;
+        margin-bottom: 108px;
     }
 
-    &__discription{
+    &__discription {
+        margin: 0 auto;
         color: #A291A5;
         font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 21px;
         margin-bottom: 19px;
+        max-width: 920px;
     }
 
     &__line {
         div {
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             width: 780px;
             height: 2px;
             flex-shrink: 0;
             background-color: #645766;
         }
+
         padding-bottom: 29px;
     }
 }
