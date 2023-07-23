@@ -1,0 +1,43 @@
+.benefits {
+    background: #F4F4F4;
+    padding: 100px 0 36px;
+    display: flex;
+    justify-content: flex-end;
+    .container {
+        max-width: 1290px;
+        margin: 0;
+    }
+    &__body {
+        display: flex;
+        gap: 49px;
+    }
+    &__title {
+        color: #8D81AC;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.04;
+        padding-left: 25px;
+        margin-bottom: 19px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        gap: 23px;
+        margin-bottom: 33px;
+    }
+    &__heading {
+        color: #323232;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 1.31;
+        margin-bottom: 16px;
+    }
+    &__paragraph {
+        color: #848E97;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 405px;
+    }
+}
