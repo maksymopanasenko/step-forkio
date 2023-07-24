@@ -8,7 +8,9 @@
     background-position-y: 92%;
     background-size: cover;
     text-align: center;
-
+    @media(max-width: 1199px){
+        padding-top: 85px;
+    }
     &__title {
         color: $white-color;
         font-family: Montserrat;
@@ -16,6 +18,9 @@
         font-weight: 700;
         line-height: 50px;
         margin-bottom: 82px;
+        @media(max-width: 1199px){
+            font-size: 45px;
+        }
     }
 
     &__list {
@@ -34,12 +39,15 @@
         font-style: italic;
         font-weight: 700;
         line-height: 24px;
-
         p {
             max-width: 325px;
         }
-
-        margin-bottom: 108px;
+        margin-bottom: 118px;
+        @media(max-width: 1199px){
+            margin-bottom: 60px;
+            flex-grow: 1;
+            width: 50%;
+        }
     }
 
     &__discription {
@@ -51,15 +59,21 @@
         line-height: 21px;
         margin-bottom: 19px;
         max-width: 920px;
+        @media(max-width: 1199px){
+            max-width: 710px;
+        }
     }
 
     &__line {
         div {
             margin: 0 auto;
-            width: 780px;
+            max-width: 780px;
             height: 2px;
             flex-shrink: 0;
             background-color: #645766;
+            @media(max-width: 1199px){
+                max-width: 555px;
+            }
         }
 
         padding-bottom: 29px;

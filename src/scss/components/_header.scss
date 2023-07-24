@@ -2,17 +2,21 @@
 @import '../base/mixin';
 
 header {
-    padding-top: 30px;
-    background-image: url(../img/preview.png);
-    background-repeat: no-repeat;
-    background-size: 100% 850px;
-    background-position: center;
+    position: relative;
+    background: url(../img/preview.png) no-repeat;
+    background-position-x: center;
+    background-position-y: 92%;
+    background-size: cover;
+
     .navigation {
+        padding-top: 30px;
         color: $purple-color;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 123px;
-
+        margin-bottom: 113px;
+        @media(max-width: 1199px){
+            display: none;
+        }
         &__logo-box {
             font-family: Lato;
             font-size: 24px;
@@ -76,10 +80,81 @@ header {
         }
     }
 
+    .navigation-adaptive {
+        background: #27262A;
+        margin-bottom: 68px;
+        display: none;
+        @media(max-width: 1199px){
+            display: block;
+        }
+        &__body {
+            padding-top: 22px;
+            @include flexsbc;
+        }
+
+        &__logo-box {
+            @include flexsbc;
+            gap: 17px;
+            color: $purple-color;
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 16px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+
+            img:last-of-type {
+                display: none;
+            }
+
+            &:hover {
+                color: $white-color;
+
+                img:first-of-type {
+                    display: none;
+                }
+
+                img:last-of-type {
+                    display: inline-block
+                }
+            }
+        }
+
+        &__list {
+            @include flexjcc;
+            gap: 47px;
+            color: $purple-color;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            padding-bottom: 18px;
+            li:hover {
+                color: $white-color;
+            }
+        }
+
+        &__btn {
+            color: $white-color;
+            background-color: $purple-color;
+            padding: 11px 33px;
+            border-radius: 40px;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 17px;
+
+            &:hover {
+                color: $purple-color;
+                background-color: $white-color;
+            }
+        }
+    }
+
     .discription {
         text-align: center;
         font-family: Montserrat;
-        position: relative;
 
         h1 {
             color: $white-color;
@@ -87,6 +162,9 @@ header {
             font-weight: 700;
             line-height: 82px;
             margin-bottom: 19px;
+            @media(max-width: 1199px){
+                font-size: 72px;
+            }
         }
 
         p:first-of-type {
@@ -96,6 +174,9 @@ header {
             font-weight: 400;
             line-height: 30px;
             margin-bottom: 19px;
+            @media(max-width: 1199px){
+                font-size: 24px;
+            }
         }
 
         p:last-of-type {
@@ -105,12 +186,16 @@ header {
             line-height: 1;
             text-transform: uppercase;
             padding-bottom: 459px;
+            @media(max-width: 1199px){
+                font-size: 14px;
+            }
         }
 
         a {
             position: absolute;
-            top: 588px;
-            left: 400px;
+            top: 774px;
+            left: 50%;
+            transform: translateX(-50%);
             color: $white-color;
             font-size: 21px;
             font-weight: 700;
@@ -126,10 +211,12 @@ header {
                 border: 2px solid $purple-color;
             }
         }
+
         span {
             position: absolute;
-            top: 680px;
-            left: 490px;
+            top: 866px;
+            left: 50%;
+            transform: translateX(-50%);
             color: $grey-color;
             font-size: 14px;
             font-style: normal;
