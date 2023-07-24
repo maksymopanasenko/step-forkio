@@ -39,10 +39,10 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
 
         @media (max-width: 1199px) {
-            flex-wrap: wrap;
             justify-content: flex-end;
             gap: 30px 25px;
         }

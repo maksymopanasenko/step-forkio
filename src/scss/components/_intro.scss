@@ -1,5 +1,12 @@
 .intro {
     padding: 129px 0 70px;
+
+    @media (max-width: 1199px) {
+        padding: 156px 0 98px;
+    }
+    @media (max-width: 767px) {
+        padding: 130px 0 88px;
+    }
     .container {
         max-width: 906px;
         margin: 0 auto;
@@ -13,6 +20,14 @@
         line-height: 1;
         text-transform: uppercase;
         margin-bottom: 20px;
+
+        @media (max-width: 1199px) {
+            font-size: 42px;
+        }
+        @media (max-width: 767px) {
+            font-size: 26px;
+            line-height: 1.07;
+        }
     }
     &__description {
         color: #323232;
@@ -21,14 +36,46 @@
         font-size: 21px;
         line-height: 1.52;
         margin-bottom: 28px;
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 1.42;
+            max-width: 455px;
+            margin: 0 auto 28px;
+            padding: 0 6px;
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        width: 130px;
     }
     &__btns {
         display: flex;
         justify-content: center;
         gap: 8px;
+
+        @media (max-width: 767px) {
+            display: grid;
+            grid-template-areas:
+            "watch watch star star"
+            ". fork fork .";
+            gap: 20px 8px;
+    
+            #watch {
+                grid-area: watch;
+            }
+            #fork {
+                grid-area: fork;
+            }
+            #star {
+                grid-area: star;
+            }
+        }
+
     }
     &__item {
         display: flex;
+        justify-content: center;
         align-items: center;
         background: rgb(246, 248, 250);
         border: 1px solid rgba(31, 35, 40, 0.15);     
@@ -38,14 +85,17 @@
         
         &:not(:first-of-type) {
             .intro__wrapper {
-                padding: 3px 12px;
-                border-right: 1px solid rgba(31, 35, 40, 0.15);
+                padding: 3px 8px;
+            }
+            .intro__triangle {
+                border-left: 1px solid rgba(31, 35, 40, 0.15);
             }
         }
     }
     &__wrapper {
-        padding: 3px 8px 3px 12px;
+        padding: 3px 12px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         font-family: "Segoe UI Semibold";
         .intro__triangle {
@@ -70,6 +120,7 @@
     &__triangle {
         padding: 3px 8px;
         display: flex;
+        justify-content: center;
         align-items: center;
         line-height: 1.5;
     }
