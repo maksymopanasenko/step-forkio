@@ -14,9 +14,11 @@ header {
         display: flex;
         justify-content: space-between;
         margin-bottom: 113px;
-        @media(max-width: 1199px){
+
+        @media(max-width: 1199px) {
             display: none;
         }
+
         &__logo-box {
             font-family: Lato;
             font-size: 24px;
@@ -84,12 +86,22 @@ header {
         background: #27262A;
         margin-bottom: 68px;
         display: none;
-        @media(max-width: 1199px){
+
+        @media(max-width: 1199px) {
             display: block;
         }
+
+        @media(max-width: 767px) {
+            margin-bottom: 28px;
+        }
+
         &__body {
             padding-top: 22px;
             @include flexsbc;
+
+            @media(max-width: 767px) {
+                padding: 31px 0px;
+            }
         }
 
         &__logo-box {
@@ -102,6 +114,10 @@ header {
             line-height: 16px;
             text-transform: uppercase;
             margin-bottom: 25px;
+
+            @media(max-width: 767px) {
+                margin-bottom: 0px;
+            }
 
             img:last-of-type {
                 display: none;
@@ -118,6 +134,11 @@ header {
                     display: inline-block
                 }
             }
+            @media(max-width: 767px) {
+                span{
+                    display: none;
+                }
+            }
         }
 
         &__list {
@@ -129,8 +150,13 @@ header {
             font-weight: 700;
             line-height: 18px;
             padding-bottom: 18px;
+
             li:hover {
                 color: $white-color;
+            }
+
+            @media(max-width: 767px) {
+                display: none;
             }
         }
 
@@ -143,11 +169,15 @@ header {
             font-family: Montserrat;
             font-size: 16px;
             font-weight: 700;
-            line-height: 17px;
+            line-height: 1;
 
             &:hover {
                 color: $purple-color;
                 background-color: $white-color;
+            }
+            @media(max-width: 767px) {
+                padding: 11px 24px;
+                font-size: 16px;
             }
         }
     }
@@ -161,9 +191,14 @@ header {
             font-size: 82px;
             font-weight: 700;
             line-height: 82px;
-            margin-bottom: 19px;
-            @media(max-width: 1199px){
+
+            @media(max-width: 1199px) {
                 font-size: 72px;
+            }
+
+            @media(max-width: 767px) {
+                font-size: 48px;
+                line-height: 1;
             }
         }
 
@@ -174,8 +209,19 @@ header {
             font-weight: 400;
             line-height: 30px;
             margin-bottom: 19px;
-            @media(max-width: 1199px){
+
+            @media(max-width: 1199px) {
                 font-size: 24px;
+            }
+
+            @media(max-width: 767px) {
+                margin: 15px auto;
+                color: $purple-color;
+                max-width: 290px;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
             }
         }
 
@@ -186,8 +232,13 @@ header {
             line-height: 1;
             text-transform: uppercase;
             padding-bottom: 459px;
-            @media(max-width: 1199px){
+
+            @media(max-width: 1199px) {
                 font-size: 14px;
+            }
+
+            @media(max-width: 767px) {
+                padding-bottom: 417px;
             }
         }
 
@@ -195,6 +246,7 @@ header {
             position: absolute;
             top: 774px;
             left: 50%;
+            width: 392px;
             transform: translateX(-50%);
             color: $white-color;
             font-size: 21px;
@@ -210,6 +262,17 @@ header {
                 background-color: $white-color;
                 border: 2px solid $purple-color;
             }
+
+            @media(max-width: 1199px) {
+                top: 781px;
+            }
+
+            @media(max-width: 767px) {
+                top: 659px;
+                width: 290px;
+                font-size: 18px;
+                padding: 15px 29px;
+            }
         }
 
         span {
@@ -222,6 +285,13 @@ header {
             font-style: normal;
             font-weight: 400;
             line-height: 15px;
+            width: 241px;
+            @media(max-width: 1199px) {
+                top: 873px;
+            }
+            @media(max-width: 767px) {
+                top: 728px;
+            }
         }
     }
 }
