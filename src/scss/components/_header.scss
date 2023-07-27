@@ -335,7 +335,7 @@ header {
 
         a {
             position: absolute;
-            top: 774px;
+            top: 754px;
             left: 50%;
             width: 392px;
             transform: translateX(-50%);
@@ -355,7 +355,7 @@ header {
             }
 
             @media(max-width: 1199px) {
-                top: 781px;
+                top: 761px;
             }
 
             @media(max-width: 767px) {
@@ -368,7 +368,7 @@ header {
 
         span {
             position: absolute;
-            top: 866px;
+            top: 846px;
             left: 50%;
             transform: translateX(-50%);
             color: $grey-color;
@@ -379,7 +379,7 @@ header {
             width: 241px;
 
             @media(max-width: 1199px) {
-                top: 873px;
+                top: 853px;
             }
 
             @media(max-width: 767px) {
