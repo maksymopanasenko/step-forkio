@@ -2,16 +2,16 @@
     padding: 83px 0 97px;
     background: url('../img/bg-subscription.png') center/cover no-repeat;
 
-    @media (max-width: 1199px) {
+    @media (max-width: 992px) {
         padding: 79px 0 94px;
     }
-    @media (max-width: 767px) {
-        padding: 2px 0 12px;
-    }
+    // @media (max-width: 767px) {
+    //     padding: 2px 0 12px;
+    // }
     .container {
         max-width: 1135px;
 
-        @media (max-width: 1199px) {
+        @media (max-width: 992px) {
             max-width: 601px;
         }
     }
@@ -24,17 +24,17 @@
         line-height: 1.04;
         margin-bottom: 61px;
 
-        @media (max-width: 1199px) {
+        @media (max-width: 992px) {
             text-align: end;
             font-size: 42px;
             margin-bottom: 39px;
         }
-        @media (max-width: 767px) {
-            text-align: center;
-            font-size: 28px;
-            line-height: 1.5;
-            margin-bottom: 32px;
-        }
+        // @media (max-width: 767px) {
+        //     text-align: center;
+        //     font-size: 28px;
+        //     line-height: 1.5;
+        //     margin-bottom: 32px;
+        // }
     }
     &__list {
         display: flex;
@@ -42,15 +42,15 @@
         flex-wrap: wrap;
         align-items: center;
 
-        @media (max-width: 1199px) {
+        @media (max-width: 992px) {
             justify-content: flex-end;
             gap: 30px 25px;
         }
 
-        @media (max-width: 767px) {
-            flex-direction: column;
-            gap: 18px;
-        }
+        // @media (max-width: 767px) {
+        //     flex-direction: column;
+        //     gap: 18px;
+        // }
     }
     &__item {
         background: rgba(255, 255, 255, 0.109);
@@ -112,6 +112,9 @@
         font-family: Montserrat;
         font-size: 16px;
         line-height: 1.12;
+        @media (max-width: 1199px) {
+            font-size: 1.4vw;            
+        }
     }
     &__btn {
         color: #FFF;
