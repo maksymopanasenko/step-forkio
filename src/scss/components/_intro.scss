@@ -1,10 +1,11 @@
 .intro {
     padding: 129px 0 70px;
+    text-align: center;
 
-    @media (max-width: 1199px) {
+    @media (max-width: 992px) {
         padding: 156px 0 98px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 480px) {
         padding: 130px 0 88px;
     }
     .container {
@@ -13,30 +14,27 @@
     }
     &__title {
         color: #635C73;
-        text-align: center;
-        font-family: Montserrat;
         font-size: 54px;
         font-weight: 700;
         line-height: 1;
         text-transform: uppercase;
         margin-bottom: 20px;
 
-        @media (max-width: 1199px) {
+        @media (max-width: 992px) {
             font-size: 42px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 480px) {
             font-size: 26px;
             line-height: 1.07;
         }
     }
     &__description {
-        color: #323232;
-        text-align: center;
+        color: $text-color-dark;
         font-family: Lato;
         font-size: 21px;
         line-height: 1.52;
         margin-bottom: 28px;
-        @media (max-width: 767px) {
+        @media (max-width: 480px) {
             font-size: 14px;
             line-height: 1.42;
             max-width: 455px;
@@ -54,7 +52,7 @@
         justify-content: center;
         gap: 8px;
 
-        @media (max-width: 767px) {
+        @media (max-width: 480px) {
             display: grid;
             grid-template-areas:
             "watch watch star star"
@@ -74,9 +72,7 @@
 
     }
     &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-sb-c;
         background: rgb(246, 248, 250);
         border: 1px solid rgba(31, 35, 40, 0.15);     
         font-size: 12px;
@@ -94,9 +90,7 @@
     }
     &__wrapper {
         padding: 3px 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-sb-c;
         font-family: "Segoe UI Semibold";
         .intro__triangle {
             padding: 0 0 0 4px;
@@ -119,9 +113,7 @@
     }
     &__triangle {
         padding: 3px 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-sb-c;
         line-height: 1.5;
     }
 }
