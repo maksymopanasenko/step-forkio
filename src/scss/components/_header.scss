@@ -55,8 +55,11 @@ header {
             font-weight: 700;
             line-height: 17px;
 
-            li:hover {
-                color: $text-color-light;
+            li {
+                transition: .4s;
+                &:hover {
+                    color: $text-color-light;
+                }
             }
         }
 
@@ -69,6 +72,7 @@ header {
             font-size: 16px;
             font-weight: 700;
             line-height: 17px;
+            transition: .4s;
 
             &:hover {
                 color: $purple-color;
@@ -199,11 +203,16 @@ header {
             line-height: 18px;
             padding-bottom: 18px;
 
-            li:hover {
-                color: $text-color-light;
+            li {
+                transition: .4s;
+                &:hover {
+                    color: $text-color-light;
+                }
             }
-            @media(max-width: 540px){
-                gap: 28px;
+
+            
+            @media(max-width: 550px){
+                gap: 24px;
             }
             @media(max-width: $mobile-width) {
                 display: none;
@@ -256,6 +265,7 @@ header {
             font-size: 16px;
             font-weight: 700;
             line-height: 1;
+            transition: .4s;
 
             &:hover {
                 color: $purple-color;
@@ -339,6 +349,7 @@ header {
             background-color: $purple-color;
             border-radius: 40px;
             border: 2px solid transparent;
+            transition: .4s;
 
             &:hover {
                 color: $purple-color;
