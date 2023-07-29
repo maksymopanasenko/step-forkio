@@ -327,7 +327,7 @@ header {
 
         a {
             position: absolute;
-            bottom: -35px;
+            bottom: -36px;
             left: 50%;
             width: 392px;
             transform: translateX(-50%);
@@ -345,6 +345,7 @@ header {
                 background-color: $text-color-light;
                 border: 2px solid $purple-color;
             }
+            
 
             @media(max-width: $mobile-width) {
                 bottom: -28px;
@@ -356,7 +357,7 @@ header {
 
         span {
             position: absolute;
-            bottom: -75px;
+            bottom: -76px;
             left: 50%;
             transform: translateX(-50%);
             color: $grey-color;
