@@ -1,13 +1,14 @@
 .subscription {
     padding: 83px 0 97px;
     background: url('../img/bg-subscription.png') center/cover no-repeat;
+    color: $text-color-light;
 
     @media (max-width: 992px) {
         padding: 79px 0 94px;
     }
-    // @media (max-width: 767px) {
-    //     padding: 2px 0 12px;
-    // }
+    @media (max-width: 480px) {
+        padding: 2px 0 12px;
+    }
     .container {
         max-width: 1135px;
 
@@ -16,46 +17,49 @@
         }
     }
     &__title {
-        color: #FFF;
         text-align: center;
-        font-family: Montserrat;
         font-size: 48px;
         font-weight: 700;
         line-height: 1.04;
         margin-bottom: 61px;
 
         @media (max-width: 992px) {
-            text-align: end;
+            padding-left: 22px;
             font-size: 42px;
             margin-bottom: 39px;
         }
-        // @media (max-width: 767px) {
-        //     text-align: center;
-        //     font-size: 28px;
-        //     line-height: 1.5;
-        //     margin-bottom: 32px;
-        // }
+        @media (max-width: 480px) {
+            padding: 0;
+            font-size: 28px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
     }
     &__list {
-        display: flex;
-        justify-content: space-between;
+        @include flex-sb-c;
         flex-wrap: wrap;
-        align-items: center;
 
         @media (max-width: 992px) {
             justify-content: flex-end;
             gap: 30px 25px;
         }
 
-        // @media (max-width: 767px) {
-        //     flex-direction: column;
-        //     gap: 18px;
-        // }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            gap: 18px;
+        }
     }
     &__item {
         background: rgba(255, 255, 255, 0.109);
-        width: 257px;
+        width: 23%;
         max-height: 457px;
+
+        @media (max-width: 992px) {
+            width: calc(50% - 25px);
+        }
+        @media (max-width: 480px) {
+            width: 257px;
+        }
     }
     &__text {
         padding: 14px 0 37px;
@@ -65,61 +69,74 @@
         flex-direction: column;
         gap: 6px;
         align-items: center;
-        color: #FFF;
-        font-family: Montserrat;
         font-size: 14px;
         line-height: 1.14;
         text-transform: uppercase;
         margin-bottom: 73px;
+        @media (max-width: 620px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: 480px) {
+            margin-bottom: 73px;
+        }
     }
     &__purchase {
-        display: flex;
+        @include flex-sb-c;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         min-height: 125px;
         text-align: center;
         position: relative;
+
+        @media (max-width: 620px) {
+            min-height: 110px;
+        }
+        @media (max-width: 480px) {
+            min-height: 125px;
+        }
         &::before {
             content: '';
             height: 5px;
             width: 60px;
-            background: #8D81AC;
+            background: $purple-color;
             position: absolute;
             top: -30px;
         }
     }
     &__price {
-        color: #FFF;
-        font-family: Montserrat;
         font-size: 60px;
         font-weight: 700;
         line-height: 1.5;
         text-transform: uppercase;
     }
-    &__label {
-        color: #FFF;
+    &__label {  
         text-align: center;
-        font-family: Montserrat;
         font-size: 24px;
         line-height: 1;
         text-transform: uppercase;
         padding: 36px 0;
         background: rgba(255, 255, 255, 0.059);
+        
+        @media (max-width: 620px) {
+            font-size: 20px;
+        }
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
     }
     &__name {
-        color: #FFF;
-        font-family: Montserrat;
+        
+        
         font-size: 16px;
         line-height: 1.12;
-        @media (max-width: 1199px) {
-            font-size: 1.4vw;            
+        @media (max-width: 620px) {
+            font-size: 14px;
+        }
+        @media (max-width: 480px) {
+            font-size: 16px;
         }
     }
     &__btn {
-        color: #FFF;
         text-align: center;
-        font-family: Montserrat;
         font-size: 15px;
         line-height: 1;
         text-transform: uppercase;
@@ -132,8 +149,15 @@
 
 .active {
     background: rgba(70, 48, 72, 0.839);
-    width: 299px;
+    width: 25%;
     max-height: 560px;
+
+    @media (max-width: 992px) {
+        width: 50%;
+    }
+    @media (max-width: 480px) {
+        width: 299px;
+    }
     .subscription {
         &__label {
             background: rgba(0, 0, 0, 0.109);
@@ -144,9 +168,22 @@
         }
         &__pricing {
             margin-bottom: 91px;
+            @media (max-width: 620px) {
+                margin-bottom: 78px;
+            }
+            @media (max-width: 480px) {
+                margin-bottom: 91px;
+            }
         }
         &__purchase {
             min-height: 183px;
+
+            @media (max-width: 620px) {
+                min-height: 168px;
+            }
+            @media (max-width: 480px) {
+                min-height: 183px;
+            }
             &::before {
                 top: -40px;
             }
@@ -157,5 +194,4 @@
             line-height: 1.12;
         }
     }
-
 }
