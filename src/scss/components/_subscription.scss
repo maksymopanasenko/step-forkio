@@ -1,6 +1,6 @@
 .subscription {
     padding: 83px 0 97px;
-    background: url('../img/bg-subscription.png') center/cover no-repeat;
+    background: url('../img/bg-subscription.png') $img-center;
     color: $text-color-light;
 
     @media (max-width: 992px) {
@@ -17,10 +17,7 @@
         }
     }
     &__title {
-        text-align: center;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 1.04;
+        @include title-common;
         margin-bottom: 61px;
 
         @media (max-width: 992px) {
