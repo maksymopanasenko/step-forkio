@@ -1,9 +1,6 @@
 .about-fork {
     padding-top: 109px;
-    background: url('../img/about-fork_b.png') no-repeat;
-    background-position-x: center;
-    background-position-y: 92%;
-    background-size: cover;
+    background: url('../img/about-fork_b.png') $img-center;
     text-align: center;
 
     @media(max-width: $laptop-width) {
@@ -12,9 +9,7 @@
 
     &__title {
         color: $text-color-light;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 50px;
+        @include title-common;
         margin-bottom: 82px;
 
         @media(max-width: $laptop-width) {
@@ -33,7 +28,9 @@
     }
 
     &__companies {
-        @include flex-jcc;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         flex-direction: column;
         gap: 33px;
         color: $text-color-light;
@@ -42,12 +39,24 @@
         font-style: italic;
         font-weight: 700;
         line-height: 24px;
+        width: calc(100% / 3);
+        margin-bottom: 118px;
 
         p {
             max-width: 325px;
-        }
 
-        margin-bottom: 118px;
+            @media(max-width: 1015px) and (min-width: 993px) {
+                max-width: 294px;
+            }
+            @media(max-width: 700px) {
+                max-width: 264px;
+            }
+            @media (min-width: 481px) and (max-width: 690px) {
+                max-width: 214px;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
 
         @media(max-width: $laptop-width) {
             gap: 28px;
